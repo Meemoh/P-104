@@ -1,7 +1,5 @@
 import csv
-
-from pyparsing import opAssoc
-
+from collections import Counter
 with open("SOCR-HeightWeight.csv", newline='') as f:
     reader= csv.reader(f)
     file_data = list(reader)
@@ -39,8 +37,8 @@ print("Median is:"+ str(median))
 #Calculating Mode
 data= Counter(new_data)
 mode_data_for_range = {
-    "50-60":0
-    "60-70":0
+    "50-60":0,
+    "60-70":0,
     "70-80":0
 }
 
